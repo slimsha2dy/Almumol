@@ -22,3 +22,10 @@
 
 1. [싫은데요](https://www.acmicpc.net/problem/25916)
 2. [참살이길](https://www.acmicpc.net/problem/27376)
+
+### 12/20 금
+
+실버
+
+1. [국가 색칠하기](https://www.acmicpc.net/problem/30702)
+2. [타이핑](https://www.acmicpc.net/problem/25215)

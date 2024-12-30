@@ -15,9 +15,16 @@
 
 ## Week2
 
-### 12/23
-
 실버
 
 1. [I AM IRONMAN](https://www.acmicpc.net/problem/17264)
 2. [과자 나눠주기](https://www.acmicpc.net/problem/16401)
+
+## Week3
+
+### 12/30 월
+
+실버
+
+1. [너의 수능 점수가 궁금해](https://www.acmicpc.net/problem/29808)
+2. [인형 전시](https://www.acmicpc.net/problem/30645)

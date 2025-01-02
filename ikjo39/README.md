@@ -28,3 +28,8 @@
 
 1. [너의 수능 점수가 궁금해](https://www.acmicpc.net/problem/29808)
 2. [인형 전시](https://www.acmicpc.net/problem/30645)
+
+### 1/2 목
+ 
+골드
+1. [부분 합](https://www.acmicpc.net/problem/1806)

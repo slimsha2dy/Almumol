@@ -57,7 +57,7 @@ jobs:
 
       - name: Post Weekly Stats
         run: |
-          CONTENT=$(cat weekly_stats.json)
+          CONTENT=$(cat weekly_stats.md)
           curl -s -X POST \
             -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
@@ -68,4 +68,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: weekly-stats
-          path: weekly_stats.json
+          path: weekly_stats.md

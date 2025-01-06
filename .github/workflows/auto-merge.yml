@@ -1,4 +1,4 @@
-name: Test Schedule Workflow
+name: Merge Open PRs
 on:
   schedule:
     - cron: '0 15 * * *' # KST 00:00

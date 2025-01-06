@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 """
 title : Reverse String
 link  : https://leetcode.com/problems/reverse-string

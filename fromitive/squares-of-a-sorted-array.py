@@ -75,6 +75,3 @@ class Solution:
                 left += 1
             result[index] = result[index] ** 2
         return result
-
-solution = Solution()
-print(solution.editorialsortedSquares([-1,5,10,-4,1,0]))

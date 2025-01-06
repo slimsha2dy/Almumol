@@ -53,7 +53,7 @@ jobs:
       - name: Analyze PRs and Generate Stats
         id: generate-stats
         run: |
-          python .github/workflows/scripts/generate_weekly_stats.py pr_data.json target_goals.json label_data.json weekly_stats.md
+          python .github/workflows/generate_weekly_stats.py pr_data.json target_goals.json label_data.json weekly_stats.md
 
       - name: Post Weekly Stats
         run: |

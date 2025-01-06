@@ -2,7 +2,7 @@ name: Temporal Weekly Stats Report
 
 on:
   schedule:
-    - cron: '30 15 * * *' # KST 00:30
+    - cron: '45 15 * * *' # KST 00:45
     - cron: '0 16 * * *' # KST 01:00
   workflow_run:
     workflows:
@@ -47,7 +47,7 @@ jobs:
       - name: Analyze PRs and Generate Stats
         id: generate-stats
         run: |
-          python .github/workflows/generate_weekly_stats.py pr_data.json target_goals.json label_data.json weekly_stats.md
+          python .github/workflows/generate_weekly_stats.py pr_data.json .github/workflows/target_goals.json label_data.json weekly_stats.md
 
       - name: Post Weekly Stats
         run: |

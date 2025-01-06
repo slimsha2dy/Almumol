@@ -1,5 +1,3 @@
-
-
 """
 title : Max consecutive ones II
 link  : https://leetcode.com/problems/max-consecutive-ones-ii

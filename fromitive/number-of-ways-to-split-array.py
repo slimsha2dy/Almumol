@@ -15,6 +15,7 @@ prefix를 구하면 k에 따라 왼쪽 및 오른쪽을 배열의 합을 O(1)의
 left = prefix[k]
 right = prefix[len(nums) - 1] - prefix[k] # 마지막 index에서 left만큼 빼면 바로 나옴
 
+
 """
 
 class Solution:
@@ -31,3 +32,15 @@ class Solution:
             if left >= right:
                 answer += 1
         return answer
+
+    def waysToSplitArrayAdvenced(self, nums: List[int]) -> int:
+        totalSum = sum(nums)
+        leftSum = 0
+        answer = 0
+        for index in range(len(nums) - 1):
+            leftSum += nums[index]
+            rightSum = totalSum - leftSum
+            if leftSum >= rightSum:
+                answer += 1
+        return answer
+        

@@ -46,11 +46,11 @@ def set_stats(prs:dict, targets:dict, all_labels:dict):
         stats[assignee_login]["target"] = targets.get(assignee_login, 0)
     return stats
 
-def calculate_stats(data: str, last_week: int, seminar: int):
+def calculate_stats(data: dict, least_week: int, last_week: int, seminar: int):
     """Calculate weekly stats and total missed count"""
     total = 0
     target = data["target"]
-    for week in range(1, last_week+1):
+    for week in range(least_week, last_week+1):
         solved = sum(data["solved"][week].values())
         total += max(0, target - solved)
     total -= seminar * target
@@ -58,14 +58,14 @@ def calculate_stats(data: str, last_week: int, seminar: int):
 
     return last_solved, target, total
 
-def generate_report(stats):
+def generate_report(stats: dict):
     """Generate report"""
     week = max(len(data["solved"]) for data in stats.values())
     report = f"### {week}주차 정산\n\n"
     seminar_list = []
     for idx, value in enumerate(stats.items()):
         user, data = value
-        last_solved, target, total = calculate_stats(data, week, 0) # Need to update with seminar, each seminar total value decreased by target value
+        last_solved, target, total = calculate_stats(data, min(stats[user]["solved"].keys()), week, 0) # Need to update with seminar, each seminar total value decreased by target value
         if total >= target:
             seminar_list.append(user)
         report += f"{idx+1}. {user}\n"

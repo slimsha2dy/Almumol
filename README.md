@@ -2,7 +2,33 @@
 
 ## 일정
 
-2024-12-16~2024-12-20 1주차 시작
+<table>
+  <tr>
+    <td align="center">날짜</td>
+    <td align="center">주차</td>
+    <td align="center">특이사항</td>
+  </tr>
+  <tr>
+    <td align="center">2024-12-16 ~</td>
+    <td align="center">1주차 시작</br></td>
+    <td align="center"></br></td>
+  </tr>
+  <tr>
+    <td align="center">2024-12-23 ~</td>
+    <td align="center">2주차 시작</br></td>
+    <td align="center"></br></td>
+  </tr>
+  <tr>
+    <td align="center">2024-12-30 ~</td>
+    <td align="center">3주차 시작</br></td>
+    <td align="center"></br></td>
+  </tr>
+  <tr>
+    <td align="center">2025-01-06 ~</td>
+    <td align="center">4주차 시작</td>
+    <td align="center">포케 시소 합류</td>
+  </tr>
+</table>
 
 <br/>
 
@@ -15,8 +41,6 @@
    <td align="center"><a href="https://github.com/slimsha2dy"><img src="https://avatars.githubusercontent.com/u/99064014?v=4" width="130px;" alt=""></a></td>
    <td align="center"><a href="https://github.com/ikjo39"><img src="https://avatars.githubusercontent.com/u/70360890?v=4" width="130px;" alt=""></a></td>
    <td align="center"><a href="https://github.com/nak-honest"><img src="https://avatars.githubusercontent.com/u/95845037?v=4" width="130px;" alt=""></a></td>
-   <td align="center"><a href="https://github.com/hyxrxn"><img src="https://avatars.githubusercontent.com/u/89867757?v=4" width="130px;" alt=""></a></td>
-   <td align="center"><a href="https://github.com/robinjoon"><img src="https://avatars.githubusercontent.com/u/45223837?v=4" width="130px;" alt=""></a></td>
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/hjk0761"><b>무빈</b></a></td>
@@ -24,8 +48,18 @@
     <td align="center"><a href="https://github.com/slimsha2dy"><b>알파카</b></a></td>
     <td align="center"><a href="https://github.com/ikjo39"><b>다온</b></a></td>
     <td align="center"><a href="https://github.com/nak-honest"><b>낙낙</b></a></td>
+  </tr>
+  <tr>
+   <td align="center"><a href="https://github.com/hyxrxn"><img src="https://avatars.githubusercontent.com/u/89867757?v=4" width="130px;" alt=""></a></td>
+   <td align="center"><a href="https://github.com/robinjoon"><img src="https://avatars.githubusercontent.com/u/45223837?v=4" width="130px;" alt=""></a></td>
+   <td align="center"><a href="https://github.com/fromitive"><img src="https://avatars.githubusercontent.com/u/46563149?v=4" width="130px;" alt=""></a></td>
+   <td align="center"><a href="https://github.com/shin-jisong"><img src="https://avatars.githubusercontent.com/u/86762272?v=4" width="130px;" alt=""></a></td>
+  </tr>
+  <tr>
     <td align="center"><a href="https://github.com/hyxrxn"><b>아토</b></a></td>
     <td align="center"><a href="https://github.com/robinjoon"><b>로빈</b></a></td>
+    <td align="center"><a href="https://github.com/fromitive"><b>포케</b></a></td>
+    <td align="center"><a href="https://github.com/shin-jisong"><b>시소</b></a></td>
   </tr>
 </table>
 

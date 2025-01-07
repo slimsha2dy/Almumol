@@ -43,4 +43,3 @@ class Solution:
             if leftSum >= rightSum:
                 answer += 1
         return answer
-        

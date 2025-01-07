@@ -1,6 +1,6 @@
 """
 title : Maximum Average Subarray I
-link  : https://leetcode.com/problems/maximum-average-subarray-i.py
+link  : https://leetcode.com/problems/maximum-average-subarray-i
 
 description
 

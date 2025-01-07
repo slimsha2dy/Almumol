@@ -60,7 +60,7 @@ def calculate_stats(data: dict, least_week: int, last_week: int, seminar: int):
 
 def generate_report(stats: dict):
     """Generate report"""
-    week = max(len(data["solved"]) for data in stats.values())
+    week = max(max(data["solved"].keys()) for data in stats.values())
     report = f"### {week}주차 정산\n\n"
     seminar_list = []
     for idx, value in enumerate(stats.items()):

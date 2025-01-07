@@ -18,7 +18,7 @@ jobs:
           DAY_OF_WEEK=$(date +'%u')
           if [ "$DAY_OF_WEEK" -ne 7 ]; then
             echo "Not Sunday. Exiting."
-            exit 0
+            exit 1
           fi
 
       - name: Checkout Repository

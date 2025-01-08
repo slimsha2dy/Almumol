@@ -8,6 +8,10 @@ description
 
 이때 nums 각 원소별로 중간 인덱스에 있는 평균 값을 구할 수 있으면 구하고, 불가능하다면 -1가 저장된 배열을 반환한다. 
 
+해결 방안
+
+k의 값이 고정되어 있으므로 slide window를 사용하여 해결할 수 있다.
+
 """
 class Solution:
     def getAverages(self, nums: List[int], k: int) -> List[int]:

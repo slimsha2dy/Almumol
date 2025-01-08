@@ -32,8 +32,9 @@ jobs:
             RESPONSE=$(curl -s -H "Authorization: Bearer $TOKEN" \
               -H "Accept: application/vnd.github.v3+json" \
               "$API_URL?state=$STATE&per_page=$PER_PAGE&page=$PAGE")
-            ALL_PR_DATA=$(echo "$ALL_PR_DATA" | jq ". + $RESPONSE")
-            LENGTH=$(echo "$RESPONSE" | jq '. | length')
+            FILTERED_RESPONSE=$(echo "$RESPONSE" | jq '[.[] | {id, title, assignee, labels}]')
+            ALL_PR_DATA=$(echo "$ALL_PR_DATA" | jq ". + $FILTERED_RESPONSE")
+            LENGTH=$(echo "$FILTERED_RESPONSE" | jq '. | length')
             if [ "$LENGTH" -lt "$PER_PAGE" ]; then
               break
             fi

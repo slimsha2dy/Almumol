@@ -1,9 +1,6 @@
 name: Temporal Weekly Stats Report
 
 on:
-  schedule:
-    - cron: '45 9 * * *' # KST 00:45
-    - cron: '0 10 * * *' # KST 01:00
   workflow_run:
     workflows:
       - 'Merge Open PRs'

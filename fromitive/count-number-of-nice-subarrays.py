@@ -18,8 +18,7 @@ subarray-sum-equals-k와 비슷한 문제이다.
 
 key - k 를해서 counter를 조회하는데 성공하면 answer에 누적한다. 
 
-그 이유는 현재 counter는 누적해서 홀수 개수를 적재하므로 현재 홀수 개수 - k = 이전 subarray가 나온다면 현재 - 이전 = 홀수가 k개인 subArray를 구할 수 있게 된다.
-
+현재 counter는 누적해서 홀수 개수를 적재하므로 현재 홀수 개수 - k = 이전 subarray가 나온다면 현재 - 이전 = 홀수가 k개인 subArray를 구할 수 있게 된다.
 """
 
 class Solution:

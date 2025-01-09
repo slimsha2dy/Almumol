@@ -13,23 +13,26 @@
 7. [국가 색칠하기](https://www.acmicpc.net/problem/30702)
 8. [타이핑](https://www.acmicpc.net/problem/25215)
 
-## Week2
+## Week2 (12/23 ~ 12/29)
 
 실버
 
 1. [I AM IRONMAN](https://www.acmicpc.net/problem/17264)
 2. [과자 나눠주기](https://www.acmicpc.net/problem/16401)
 
-## Week3
-
-### 12/30 월
+## Week3 (12/30 ~ 1/5)
 
 실버
 
 1. [너의 수능 점수가 궁금해](https://www.acmicpc.net/problem/29808)
 2. [인형 전시](https://www.acmicpc.net/problem/30645)
-
-### 1/2 목
  
 골드
 1. [부분 합](https://www.acmicpc.net/problem/1806)
+
+## Week4 (12/6 ~ 1/12)
+
+실버
+
+1. [2xn 타일링](https://www.acmicpc.net/problem/11726)
+2. [금공강 사수](https://www.acmicpc.net/problem/27375)

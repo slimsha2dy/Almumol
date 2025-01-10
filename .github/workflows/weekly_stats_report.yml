@@ -16,15 +16,18 @@ jobs:
         id: check-sunday
         run: |
           DAY_OF_WEEK=$(date +'%u')
-          if [ "$DAY_OF_WEEK" -ne 7 ]; then
-            echo "Not Sunday. Exiting."
-            exit 1
+          if [ "$DAY_OF_WEEK" -eq 7 ]; then
+            echo "IS_SUNDAY=true" >> $GITHUB_ENV
+          else
+            echo "IS_SUNDAY=false" >> $GITHUB_ENV
           fi
 
       - name: Checkout Repository
+        if: env.IS_SUNDAY == 'true'
         uses: actions/checkout@v3
 
       - name: Extract closed pull requests using API
+        if: env.IS_SUNDAY == 'true'
         id: list-prs
         run: |
           API_URL="https://api.github.com/repos/${{ github.repository }}/pulls"
@@ -50,6 +53,7 @@ jobs:
           echo "$ALL_PR_DATA" > pr_data.json
 
       - name: Fetch Labels from Repository
+        if: env.IS_SUNDAY == 'true'
         id: fetch-labels
         run: |
           LABELS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
@@ -59,6 +63,7 @@ jobs:
           echo "$LABELS" > label_data.json
 
       - name: Upload PR and Label Data
+        if: env.IS_SUNDAY == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: pr-and-label-data
@@ -67,11 +72,13 @@ jobs:
             label_data.json
 
       - name: Analyze PRs and Generate Stats
+        if: env.IS_SUNDAY == 'true'
         id: generate-stats
         run: |
           python .github/workflows/generate_weekly_stats.py pr_data.json .github/workflows/target_goals.json label_data.json weekly_stats.md
 
       - name: Post Weekly Stats
+        if: env.IS_SUNDAY == 'true'
         run: |
           CONTENT=$(cat weekly_stats.md)
           curl -s -X POST \
@@ -81,6 +88,7 @@ jobs:
             "https://api.github.com/repos/${{ github.repository }}/issues"
       
       - name: Upload weekly stats
+        if: env.IS_SUNDAY == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: weekly-stats

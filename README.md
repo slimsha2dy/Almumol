@@ -29,7 +29,7 @@
     <td align="center">포케 시소 합류</td>
   </tr>
   <tr>
-    <td align="center">2025-01-013 ~</td>
+    <td align="center">2025-01-13 ~</td>
     <td align="center">5주차 시작</td>
     <td align="center">러쉬 합류</td>
   </tr>

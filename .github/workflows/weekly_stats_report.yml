@@ -29,7 +29,7 @@ jobs:
       - name: Extract closed pull requests using API
         if: env.IS_SUNDAY == 'true'
         id: list-prs
-        run: |
+        run: | 
           API_URL="https://api.github.com/repos/${{ github.repository }}/pulls"
           TOKEN="${{ secrets.GITHUB_TOKEN }}"
           STATE="closed"
@@ -37,19 +37,37 @@ jobs:
           PAGE=1
           OUTPUT_FILE="pr_data.json"
           echo "[]" > $OUTPUT_FILE
-      
+          
           while true; do
             RESPONSE=$(curl -s -H "Authorization: Bearer $TOKEN" \
               -H "Accept: application/vnd.github.v3+json" \
               "$API_URL?state=$STATE&per_page=$PER_PAGE&page=$PAGE")
+          
+            if [ -z "$RESPONSE" ] || [ "$RESPONSE" == "[]" ]; then
+              echo "API response is empty. Skipping page $PAGE."
+              break
+            fi
+          
             FILTERED_RESPONSE=$(echo "$RESPONSE" | jq '[.[] | {id, title, assignee, labels}]')
-            echo "$FILTERED_RESPONSE" | jq '. + input' $OUTPUT_FILE > temp.json && mv temp.json $OUTPUT_FILE
+          
+            if [ -z "$FILTERED_RESPONSE" ] || [ "$FILTERED_RESPONSE" == "[]" ]; then
+              echo "No valid data for page $PAGE. Skipping."
+              break
+            fi
+          
+            echo "$FILTERED_RESPONSE" | jq '. + input' $OUTPUT_FILE > temp.json || { echo "File merge failed."; exit 1; }
+            mv temp.json $OUTPUT_FILE
+          
             LENGTH=$(echo "$FILTERED_RESPONSE" | jq '. | length')
             if [ "$LENGTH" -lt "$PER_PAGE" ]; then
               break
             fi
+          
             PAGE=$((PAGE + 1))
           done
+          
+          jq empty $OUTPUT_FILE || { echo "Final output file is not valid JSON."; exit 1; }
+
 
 
       - name: Fetch Labels from Repository

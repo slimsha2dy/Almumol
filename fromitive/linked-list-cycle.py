@@ -14,7 +14,7 @@ class ListNode:
         self.next = None
 
 class Solution:
-    def hasCycle(self, head: Optional[ListNode]) -> bool:
+    def hasCycleWithFastAndSlow(self, head: Optional[ListNode]) -> bool:
         slow = head
         fast = head
         while fast and fast.next:
@@ -22,5 +22,15 @@ class Solution:
             fast = fast.next.next
             if fast == slow:
                 return True
+
+        return False         
+    def hasCycleWithVisited(self, head: Optional[ListNode]) -> bool:
+        dummy = head
+        visited = set()
+        while dummy:
+            if dummy in visited:
+                return True
+            visited.add(dummy)
+            dummy = dummy.next
 
         return False         

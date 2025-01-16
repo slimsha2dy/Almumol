@@ -46,3 +46,4 @@
 골드
 
 1. [별 찍기 - 10](https://www.acmicpc.net/problem/2447)
+2. [암호 만들기](https://www.acmicpc.net/problem/1759)

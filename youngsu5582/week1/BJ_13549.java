@@ -109,14 +109,16 @@ public class BJ_13549 {
             }
         }
     }
-}
 
-class Element {
-    int x;
-    int count;
+    private static class Element {
+        int x;
+        int count;
 
-    public Element(final int x, final int count) {
-        this.x = x;
-        this.count = count;
+        public Element(final int x, final int count) {
+            this.x = x;
+            this.count = count;
+        }
     }
+
 }
+

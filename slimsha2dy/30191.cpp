@@ -41,6 +41,7 @@ int	main(int argc, char **argv)
 
 	for (char c : str) s.push(c);
 	while (!s.empty()) recur();
+	cout << v.size() << '\n';
 	for (char c : v) cout << c;
 }
 
